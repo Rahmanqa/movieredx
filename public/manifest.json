@@ -1,0 +1,25 @@
+{
+  "name": "MOVIE REDX - Movies & TV Series Discovery Guide",
+  "short_name": "MOVIE REDX",
+  "description": "Explore movies, TV series, ratings, official trailers, and streaming provider availability.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#0f1626",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "movies", "reference"]
+}

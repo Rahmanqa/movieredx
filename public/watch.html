@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Watch Free Movie - MOVIE REDX</title>
+  <meta name="description" content="Watch high-definition free movies and TV shows online on MOVIE REDX. Fast multi-server streaming with zero buffering.">
+  <meta name="theme-color" content="#e50914">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/player.css">
+  <meta name="keywords" content="watch free movies, movie stream, MOVIE REDX, watch online hd 4k, hindi stream, hindi dubbed movies, full movie free">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://movie-redx-1.onrender.com/watch.html">
+  <meta name="google-site-verification" content="7rIJDeswNENvkS2VnEYMtSBJF-YZ_qXwIhR5pyKkX4Y">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="video.movie">
+  <meta property="og:site_name" content="MOVIE REDX">
+  <meta property="og:title" content="Watch Free Movie in 4K/HD - MOVIE REDX">
+  <meta property="og:description" content="Watch high-definition free movies and TV shows online on MOVIE REDX. Fast multi-server streaming with zero buffering.">
+  <meta property="og:image" content="https://image.tmdb.org/t/p/w1280/1E5baAaEse26fej7uHcjOgEE2t2.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Watch Free Movie - MOVIE REDX">
+  <meta name="twitter:description" content="Fast multi-server movie streaming in full HD & 4K on MOVIE REDX.">
+  <meta name="twitter:image" content="https://image.tmdb.org/t/p/w1280/1E5baAaEse26fej7uHcjOgEE2t2.jpg">
+
+  <script type="application/ld+json" id="movie-schema-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    "name": "MOVIE REDX Free Cinema Stream",
+    "url": "https://movie-redx-1.onrender.com/watch.html",
+    "description": "Stream high-definition movies and series online on MOVIE REDX with multi-server playback.",
+    "potentialAction": {
+      "@type": "WatchAction",
+      "target": "https://movie-redx-1.onrender.com/watch.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- TOP PROMO AD SLOT -->
+  <aside class="top-ad-banner-wrapper" id="top-ad-slot" style="display:none;" aria-label="Sponsor Advertisement">
+    <!-- Populated by ads.js if enabled -->
+  </aside>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand" title="MOVIE REDX">
+        <span class="brand-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 3v2h-2V3H8v2H6V3H4v18h2v-2h2v2h8v-2h2v2h2V3h-2zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm10 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/>
+          </svg>
+        </span>
+        <div class="brand-title">
+          <span>MOVIE</span>
+          <span class="redx-tag">REDX</span>
+        </div>
+      </a>
+
+      <!-- INSTANT SEARCH ON WATCH PAGE -->
+      <div class="nav-search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="movie-search-input" placeholder="Search other movies..." aria-label="Search movies" autocomplete="off" onkeydown="if(event.key==='Enter'){window.location='index.html?q='+encodeURIComponent(this.value)}">
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link-item">
+          <span>🏠 Browse Catalog</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- WATCH PAGE MAIN WRAPPER -->
+  <main class="watch-page-wrapper">
+    <div class="watch-layout">
+
+      <!-- LEFT: VIDEO STAGE & DETAILS -->
+      <section class="video-stage-container" id="video-stage-root">
+
+        <!-- 16:9 VIDEO PLAYER BOX -->
+        <div class="video-player-box" id="player-box">
+
+          <!-- HTML5 VIDEO PLAYER (For direct MP4/HLS streams) -->
+          <video 
+            id="html5-video-player" 
+            class="video-player-element" 
+            controls 
+            preload="metadata" 
+            playsinline 
+            style="display:none;">
+            Your browser does not support HTML5 video playback.
+          </video>
+
+          <!-- EMBED IFRAME STREAM (Multi-Server Streaming) -->
+          <iframe 
+            id="embed-iframe-player" 
+            class="embed-iframe-element" 
+            allowfullscreen 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="origin"
+            loading="lazy">
+          </iframe>
+
+        </div>
+
+        <!-- STREAM FALLBACK & AUDIO NOTICE ALERT -->
+        <div class="stream-fallback-notice" id="fallback-notice-box">
+          <div class="notice-content-group">
+            <div class="notice-icon">💡</div>
+            <div class="notice-text">
+              <strong>Note:</strong> If current server is not working, <span class="notice-highlight">try another server</span> from the buttons below. For Hindi Dubbed audio, switch to <strong>🇮🇳 Server 1 (Hindi Dub)</strong> or <strong>🇮🇳 Server 2 (Hindi Dub)</strong>.
+            </div>
+          </div>
+          <button class="btn-quick-switch" onclick="switchNextServer()">
+            <span>⚡ Next Server</span>
+          </button>
+        </div>
+
+        <!-- STREAMING SERVER SWITCHER & CONTROLS -->
+        <div class="player-servers-bar">
+          <div class="servers-group">
+            <span class="server-label">Streaming Server:</span>
+            <div id="stream-servers-list" style="display:flex; flex-wrap:wrap; gap:6px;">
+              <!-- Populated by player.js -->
+            </div>
+          </div>
+
+          <div class="player-action-buttons">
+            <button class="player-action-btn btn-volume-boost" id="volume-boost-btn" onclick="boostAudioVolume()" title="Boost Movie Sound">
+              <span>🔊 Boost Volume (+200%)</span>
+            </button>
+            <button class="player-action-btn" id="cinema-mode-btn" onclick="toggleCinemaMode()">
+              <span>🌙 Cinema</span>
+            </button>
+            <button class="player-action-btn" onclick="togglePlayerFullscreen()">
+              <span>⛶ Fullscreen</span>
+            </button>
+            <button class="player-action-btn" id="watch-trailer-trigger">
+              <span>▶ Trailer</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- UNDER PLAYER MONETIZATION AD SLOT -->
+        <div id="player-bottom-ad-slot" style="display:none;" aria-label="Sponsor Promo"></div>
+
+        <!-- TV SHOW SEASON & EPISODE PICKER (Shown only for TV series) -->
+        <div class="tv-episodes-panel" id="tv-panel" style="display: none;">
+          <div class="tv-episodes-header">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="font-weight: 700; font-size: 0.9rem; color: #fff;">Episodes:</span>
+              <select id="season-selector" class="season-select-box">
+                <!-- Populated by player.js -->
+              </select>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);" id="episode-count-label">
+              Season 1
+            </div>
+          </div>
+          <div class="episodes-grid" id="episodes-grid">
+            <!-- Populated by player.js -->
+          </div>
+        </div>
+
+        <!-- MOVIE DETAILS & CAST -->
+        <div class="movie-details-box">
+          <div class="watch-title-row">
+            <div>
+              <h1 class="watch-title" id="media-title">Loading title...</h1>
+              <div class="watch-meta-badges">
+                <span class="card-rating-badge" id="media-rating">★ 8.8</span>
+                <span class="badge-quality" id="media-quality">4K ULTRA HD</span>
+                <span style="color: var(--text-secondary);" id="media-year">2024</span>
+                <span style="color: var(--text-muted);">•</span>
+                <span style="color: var(--text-secondary);" id="media-runtime">1h 45m</span>
+                <span style="color: var(--text-muted);">•</span>
+                <span style="color: var(--primary-glow); font-weight:600;" id="media-genres">Action, Sci-Fi</span>
+              </div>
+            </div>
+            <button id="media-watchlist-btn" class="btn-watchlist-hero" title="Save to Watchlist">
+              +
+            </button>
+          </div>
+
+          <p class="watch-synopsis" id="media-synopsis">
+            Synopsis will be displayed here.
+          </p>
+
+          <!-- CAST & CREW CAROUSEL -->
+          <div class="cast-section" id="cast-section">
+            <h4 class="cast-title">Top Cast & Performers</h4>
+            <div class="cast-scroller" id="cast-scroller">
+              <!-- Populated by player.js -->
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RIGHT: SIDEBAR & RECOMMENDED TITLES -->
+      <aside class="watch-sidebar-col">
+
+        <!-- DYNAMIC SIDEBAR AD SLOT -->
+        <div id="sidebar-ad-slot" style="display:none;" aria-label="Sponsor Promo"></div>
+
+        <!-- FAST STREAM PASS BOX -->
+        <div class="sidebar-box" style="border-color: rgba(229, 9, 20, 0.3); background: linear-gradient(145deg, #161224, #20101b);">
+          <span class="ad-badge" style="background: var(--accent-gold); color: #000; font-size: 0.65rem; font-weight: 800; padding: 2px 6px; border-radius: 4px;">FREE PASS</span>
+          <h4 style="color:#fff; font-size: 1rem; margin: 8px 0 6px;">Stream in 4K Ultra HD</h4>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">
+            Enjoy seamless high-speed streaming on all servers with zero interruptions.
+          </p>
+          <a href="https://www.profitableratecpmnetwork.com/x394gs0y8n?key=e1fbe8dd25c9a9d0b513857fc2667364" target="_blank" class="btn-play-hero" style="display: block; text-align: center; font-size: 0.85rem; padding: 8px 16px;">
+            Claim Fast Stream Access →
+          </a>
+        </div>
+
+        <!-- SIMILAR / RECOMMENDED TITLES -->
+        <div class="sidebar-box">
+          <h4 class="sidebar-heading">🔥 Recommended For You</h4>
+          <div class="sidebar-related-list" id="sidebar-recommendations">
+            <!-- Populated by player.js -->
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- TRAILER MODAL -->
+  <div class="modal-overlay" id="trailer-modal">
+    <div class="modal-container" style="max-width: 860px; background: #000;">
+      <div class="modal-header" style="border-color: #222;">
+        <h3 id="trailer-title">Trailer</h3>
+        <button class="btn-close-modal" id="close-trailer-modal">&times;</button>
+      </div>
+      <div style="position: relative; aspect-ratio: 16/9; width: 100%;">
+        <iframe id="trailer-iframe" style="width: 100%; height: 100%; border: none;" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE BOTTOM NAVIGATION DOCK -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-tab">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="index.html" class="mobile-nav-tab">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+      </svg>
+      <span>Movies</span>
+    </a>
+    <a href="index.html" class="mobile-nav-tab">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/>
+      </svg>
+      <span>TV Shows</span>
+    </a>
+  </nav>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🎬 MOVIE <span style="color: var(--primary-glow); font-style: italic;">REDX</span></h3>
+        <p>Watch full free movies and TV series in HD and 4K without subscription fees. Instant multi-server playback across all mobile and desktop devices.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="dmca.html">DMCA Copyright Notice</a></li>
+          <li><a href="dmca.html#privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="site-disclaimer" style="font-size:12px;color:#9aa0a6;text-align:center;margin:12px 0;">
+  MOVIE REDX uses third-party resources for movie information, images and trailers; all content belongs to its respective owners.<br>
+  We do not host or store any video files on our servers. For any copyright concern, please contact us via our <a href="/dmca.html">DMCA page</a>.
+</p>
+      <div>&copy; 2026 MOVIE REDX. All rights reserved.</div>
+      <div>Compatible on Mobile, Tablet & Desktop Browsers</div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/ads.js"></script>
+  <script src="js/player.js"></script>
+
+  <!-- ADSTERRA SOCIAL BAR (IN-PAGE PUSH) -->
+  <script src="https://pl31401480.profitableratecpmnetwork.com/c5/07/e0/c507e042dea65dec4c1a932563878bad.js"></script>
+</body>
+</html>
